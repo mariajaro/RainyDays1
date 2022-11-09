@@ -1,0 +1,109 @@
+.logo {
+    height: 179px;
+    width: 334px;
+    padding:22.5px 0px 0px 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.welcome {
+    background-image: url("../images/beautiful-shot-grassy-hills-covered-trees-near-mountains-dolomites-italy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    min-height: 70vh;
+}
+
+.about-picture {
+    width: 693px;
+    height: 460px;
+    left: 374px;
+    top: 350px;
+    position: absolute;
+}
+
+.cta {
+    background-color: #0A3641;
+    color:#fff;
+    font-size: 1em;
+    padding: 10px;
+    text-transform:capitalize;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: none;
+    float: left;
+}
+
+.cta-small {
+    padding: 8px 30px;
+    font-size: 0.8em;
+    grid-column: 2;
+    grid-row: 2/4;
+    min-width: 51.2px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-send {
+    padding: 8px 30px;
+    font-size: 0.8em;
+    grid-column: 2;
+    grid-row: 2/4;
+    min-width: 51.2px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-homepage {
+    background-color: #0A3641;
+    color:#fff;
+    font-size: 1.5em;
+    padding: 10px;
+    text-transform:capitalize;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: none;
+    float: left;
+}
+
+body {
+    font-family: "Avenir", Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-gap: 20px;
+}
+
+.products img {
+    position:static;
+    width: 254px;
+    height: 261px;
+    left: 325px;
+    top: 276px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
