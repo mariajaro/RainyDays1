@@ -16,12 +16,11 @@
     min-height: 70vh;
 }
 
-.about-picture {
+.about-us {
     width: 693px;
     height: 460px;
     left: 374px;
     top: 350px;
-    position: absolute;
 }
 
 .cta {
@@ -73,13 +72,8 @@
     text-transform:capitalize;
     border-radius: 5px;
     text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-grow: none;
-    float: left;
+    display: grid;
+    justify-content: center;
 }
 
 body {
@@ -106,4 +100,9 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+header {
+    display: grid;
+    justify-content: center;
 }
