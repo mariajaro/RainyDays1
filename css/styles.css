@@ -7,73 +7,28 @@
     display: block;
 }
 
-.welcome {
-    background-image: url("../images/beautiful-shot-grassy-hills-covered-trees-near-mountains-dolomites-italy.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    min-height: 70vh;
+header {
+    background-color: lightgrey;
 }
 
-.about-us {
-    width: 693px;
-    height: 460px;
-    left: 374px;
-    top: 350px;
-}
-
-.cta {
-    background-color: #0A3641;
-    color:#fff;
-    font-size: 1em;
-    padding: 10px;
-    text-transform:capitalize;
-    border-radius: 5px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-grow: none;
-    float: left;
-}
-
-.cta-small {
-    padding: 8px 30px;
-    font-size: 0.8em;
-    grid-column: 2;
-    grid-row: 2/4;
-    min-width: 51.2px;
-    text-align: center;
+.nav {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    position: static;
 }
 
-.cta-send {
-    padding: 8px 30px;
-    font-size: 0.8em;
-    grid-column: 2;
-    grid-row: 2/4;
-    min-width: 51.2px;
-    text-align: center;
+nav ul {
+    padding: 0px;
+ }
+
+nav li {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.cta-homepage {
-    background-color: #0A3641;
-    color:#fff;
-    font-size: 1.5em;
+a {
+    text-decoration:none;
+    color: black;
     padding: 10px;
-    text-transform:capitalize;
-    border-radius: 5px;
-    text-decoration: none;
-    display: grid;
-    justify-content: center;
+    font-size: 30px;
 }
 
 body {
@@ -85,13 +40,28 @@ body {
     text-align: center;
 }
 
-.product-list {
+/* Home */
+
+.welcome_image {
+    border-radius: 5px;
+    width: 80%;
+}
+
+
+.about-us {
+    border-radius: 5px;
+    width: 80%;
+}
+
+/* Products */
+
+.products-list {
     display: grid;
     grid-template-columns: repeat(2, minmax(0,1fr));
     grid-gap: 20px;
 }
 
-.products img {
+.products-list img {
     position:static;
     width: 254px;
     height: 261px;
@@ -102,7 +72,33 @@ body {
     margin-right: auto;
 }
 
-header {
+/* Product, Cart */
+
+.product {
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-gap: 20px;
 }
+
+.product img {
+    position:static;
+    width: 254px;
+    height: 261px;
+    left: 325px;
+    top: 276px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact us*/ 
+
+
+
+
+@media (min-width: 1000px) {
+    .events_exhibitions {
+        flex-direction: row; 
+    }
+
+    }
