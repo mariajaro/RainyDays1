@@ -91,11 +91,6 @@ body {
     margin-right: auto;
 }
 
-/* Contact us*/ 
-
-
-
-
 @media (min-width: 1000px) {
     .events_exhibitions {
         flex-direction: row; 
