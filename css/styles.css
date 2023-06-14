@@ -1,54 +1,88 @@
-.logo {
-    height: 179px;
-    width: 334px;
-    padding:22.5px 0px 0px 10px;
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
+.logo,
+.logoWP {
+  height: 179px;
+  width: 334px;
+  padding: 1px 0px 0px 0px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  background-color: transparent !important;
 }
 
-header {
-    background-color: lightgrey;
-}
+  
 
-.nav {
+  header {
+    background-color: rgb(164, 194, 218);
+    position: relative;
+  }
+  
+  .nav {
     display: block;
     position: static;
-}
-
-nav ul {
-    padding: 0px;
- }
-
-nav li {
-    display: block;
-}
-
-a {
-    text-decoration:none;
-    color: black;
-    padding: 10px;
-    font-size: 30px;
-}
-
-body {
+  }
+  
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: #0A3641;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+  }
+  
+  body {
     font-family: "Avenir", Verdana, Geneva, Tahoma, sans-serif;
     min-height: 100vh;
     margin: 0px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     text-align: center;
-}
+  }
+  
+  
 
 /* Home */
 
+.logoWP {
+    height: 179px;
+    width: 334px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 .welcome_image {
-    border-radius: 5px;
-    width: 80%;
+    background-image:url(/images/beautiful-shot-grassy-hills-covered-trees-near-mountains-dolomites-italy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.navHOME {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .navHOME a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 50px;
+    background-color: #0A3641;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+  }
 
-.about-us {
+/* About us */
+
+  .about-us {
     border-radius: 5px;
     width: 80%;
 }
@@ -97,3 +131,20 @@ body {
     }
 
     }
+
+    @media (max-width: 600px) {
+        .navHOME {
+          flex-direction: row; /* Change direction to horizontal */
+          justify-content: center; /* Center align the buttons horizontally */
+        }
+        
+        .navHOME a {
+          margin-bottom: 10px; /* Add spacing between buttons when stacked horizontally */
+          margin-right: 10px; /* Reset right margin to maintain spacing */
+        }
+        
+        .navHOME a:last-child {
+          margin-right: 0;
+          margin-bottom: 0; /* Remove margin-bottom for the last button */
+        }
+      }
