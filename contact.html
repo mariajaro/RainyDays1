@@ -3,49 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="descrition" content="Contact us about our jackets." />
+    <meta name="description" content="Contact us about our jackets." />
     <title>Rainy Days | Contact </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet"/>
 </head>
 <body>
-</header>
-<header>
-    <div>
-        <a href="index.html"> 
-        <img class="logo" src="images/RainyDays_Logo.png" alt="RainyDays Logo"/></a>
-    </div>
-    <nav>
-        <a href="index.html" >Home</a>
-        <a href="about us.html" >About us</a>
-        <a href="shop.html" >Shop</a>
-        <a href="contact.html" >Contact</a>
-    </nav>
-</header>
-    <main class="contact">
+    <header> 
+        <div class="logo">  
+            <img class="logo" src="images/RainyDays_Logo.png" alt="RainyDays Logo">
+        </a>  
+        </div>   
+            <nav>
+                <ul>
+                <a href="index.html" >Home</a>
+                <a href="about us.html" >About us</a>
+                <a href="shop.html" >Shop</a>
+                <a href="contact.html" >Contact</a>
+                </ul>
+            </nav>
+    </header>
+    <main>
         <h1>Contact Us</h1>
-        <form method="POST">
-        <div>
-            <section>
-                <label for="name">Full name</label>
-                <input type="text" id="name" name="Name"/> 
+            <section class="contact">
+                <form id="contactForm">
+                <label for="name">Name:</label>
+                <br>   
+                <input id="name" type="text" name="name">
                 <br>
                 <br>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="Email"/> 
+                <label for="email">Your e-mail adress:</label>
                 <br>
-                <div>
-                <input type="checkbox" id="email-updates" name="email-updates" name="email-updates"/>
-                <label for="email-updates">Sign up for email updates.</label>
-                </div>
-            </section>
-            <br>
-            <br>
-           <section>
-            <label for="message">Message</label>
-            <textarea id="message" name="message"></textarea>
-           </section>
-        </div>
-        <input type="submit" value="Send Now" class="cta-send">
+                <input id="email" type="email" name="email">
+                <br>
+                <br>
+                <label for="subject">Subject:</label>
+                <br>
+                <input id="subject" type="text" name="subject">
+                <br>
+                <br>
+                <label for="message">Enter your message here:</label>
+                <br>
+                <textarea id="message" name="message"></textarea>
+                <br>
+                <br>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+            <img src="images/hiker-stand-camping-front-orange-tent-backpack-mountains.jpg" alt="Picture of a hiker in the mountines">
+        </section>    
     </form>
  </main>
  <footer> Copyright &copy;</footer>
