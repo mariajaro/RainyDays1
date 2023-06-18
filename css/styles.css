@@ -1,53 +1,53 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
+}
+
 header {
-  background-color: rgb(164, 194, 218);
-  padding: 10px;
+  background-color: rgb(248, 244, 244);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-header a {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #0A3641;
-  font-size: 18px;
-  background-color: #0A3641;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-header a:hover {
-  background-color: #184F5D;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
 }
 
 .logo img {
-  height: 150px;
+  height: auto;
+  max-height: 50px;
+}
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #0A3641;
+  margin-bottom: 5px;
+}
+
+nav {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li:last-child {
-  margin-right: 0;
+  margin-right: 50px;
 }
 
 nav ul li a {
@@ -61,103 +61,104 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #fff;
-  color: #0A3641;
+  background-color: #184F5D;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ .hamburger-icon {
+  background-color: transparent;
+}
+
+#hamburger-menu:checked ~ .hamburger-icon span {
+  background-color: #0A3641;
+}
+
+#hamburger-menu:checked ~ nav ul {
+  display: flex;
+}
+
+footer {
+  background-color: #0A3641;
+  color: white;
+  padding: 10px 0;
 }
 
 
-a {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 50px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #0A3641;
-  font-size: 25px;
-}
+/* Home page */
 
-
-body {
-  font-family: 'PT Sans', sans-serif;
-  min-height: 100vh;
-  margin: 0px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  text-align: center;
-}
-  
-
-/* Home */
-
-.welcomepage {
-  height: 179px;
-  width: 334px;
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.welcome_image {
-  background-image:url(/images/beautiful-shot-grassy-hills-covered-trees-near-mountains-dolomites-italy.jpg);
+.homeIMG {
+  background-image: url(/images/people-2591874_1280.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.navHOME {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.imgText {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
   transform: translate(-50%, -50%);
+  text-align: center;
 }
-  
-.navHOME a {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 50px;
-  background-color: #0A3641;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 25px;
+
+.imgText h1 {
+  color: #0A3641; 
+  font-size: 32px; 
 }
+
 
 /* About us */
 
+.about {
+  text-align: center;
+}
+
 .about img {
   border-radius: 5px;
-  width: 90%;
+  max-width: 60%;
 }
 
 /* Contact Us */
 
 .contact {
-  display: flex;  
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 60%;
-  justify-content: space-around;
+  max-width: 800px;
   margin: auto;
-  line-height: 29px; 
+  line-height: 29px;
   column-gap: 70px;
 }
 
+.contact form {
+  margin-bottom: 20px;
+}
+
 .contact img {
-  width: 80%;
+  max-width: 100%;
+  height: auto;
 }
 
 
 /* Thank you */
 
+.thankyou {
+  text-align: center;
+}
+
 .thankyou img {
   border-radius: 5px;
-  width: 90%;
+  width: 60%;
 }
 
 
-/* Products */
+/* Shop page */
 
 .products-list {
   display: grid;
@@ -207,7 +208,7 @@ body {
 }
 
 
-/* Product details */
+/* Product specific page */
 
 .product_specific {
   display: flex;
@@ -253,68 +254,154 @@ body {
   font-size: 18px;
   margin-top: 20px; 
 }
-  
-  
-@media (min-width: 768px) {
-
-.contact {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  width: 60%;
-  justify-content: space-around;
-  margin: auto;
-  line-height: 29px;
-  column-gap: 70px;
-}
-
-.contact img {
-  width: 80%;
-}
-}
-
+ 
 @media (max-width: 767px) {
 
-.navHOME {
-  flex-direction: row; 
-  justify-content: center; 
-}
-        
-.navHOME a {
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-        
-.navHOME a:last-child {
-  margin-right: 0;
-  margin-bottom: 0;
+  .logo img {
+    max-height: 90px;
+  }
+
+  .contact {
+    flex-direction: column;
+    column-gap: 0;
+  }
+  
+  .contact form {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .contact img {
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .about img {
+    max-width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .products-list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .product img {
+    width: 60%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .product_specific {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product_specific img {
+    width: 60%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .product_specific .details {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thankyou img {
+    width: 80%;
+    height: auto;
 }
 
-.product {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-        
-.product img {
-  margin-right: 0;
-  margin-bottom: 10px;
+nav {
+  display: none;
 }
 
-.contact {
+#hamburger-menu:checked ~ nav {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  width: 90%;
-  justify-content: center;
-  margin: auto;
-  line-height: 29px;
-  column-gap: 0;
-}
-        
-.contact img {
-  width: 100%;
-}
+  align-items: center;
 }
 
-        
+.hamburger-icon {
+  display: block;
+}
+
+nav ul {
+  flex-direction: column;
+}
+
+nav ul li {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+}
+
+
+@media (min-width: 768px) {
+
+  header {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 0;
+  }
+
+  .logo img {
+    max-height: 120px;
+  }
+
+  .contact {
+    flex-direction: row;
+  }
+  
+  .contact form {
+    margin-right: 20px;
+  }
+  
+  .contact img {
+    max-width: 50%;
+  }
+
+  .products-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .product img {
+    width: 200px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  .product_specific {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .product_specific img {
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .product_specific .details {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .thankyou img {
+    width: 800px;
+    height: auto;
+  }
+}
+
